@@ -1,28 +1,28 @@
 html#main-window {
-	--color-bg: #1e1f29;
+	--color-bg: #2e3440;
 	--toolbar-bgcolor: var(--color-bg) !important;
 
 	--gap-between-tabs: 5px;
 	--margin-after-tab-list: 8x;
 	--margin-before-tab-list: 8px;
-	--tab-font: "Cantarell", sans-serif;
-	--tab-font-weight: 700;
+	--tab-font: "Ubuntu", sans-serif;
+	--tab-font-weight: 600;
 	--tab-height: 32px;
-	--tabs-container-height: 140px;
+	--tabs-container-height: 118px;
 
 	--urlbar-container-margin: 5px;
 	--urlbar-list-width: 60%;
-	--urlbar-text-font: "mononoki Nerd Font", sans-serif;
-	--urlbar-text-size: 15pt;
-	--urlbar-text-weight: 700;
+	--urlbar-text-font: "Open Sans", sans-serif;
+	--urlbar-text-size: 13pt;
+	--urlbar-text-weight: 400;
 
 	/* Firefox variables */
-	--lwt-toolbar-field-focus-color: #a1ffb6 !important;
-	--lwt-toolbar-field-color: #fefefa !important;
+	--lwt-toolbar-field-focus-color: #eceff4 !important;
+	--lwt-toolbar-field-color: #eceff4 !important;
 	--lwt-toolbar-field-background-color: var(--color-bg) !important;
 
-	--arrowpanel-background: #1e1f29 !important;
-	--arrowpanel-color: white !important;
+	--arrowpanel-background: #2e3440 !important;
+	--arrowpanel-color: #e5e9f0 !important;
 	--arrowpanel-border-color: transparent !important;
 }
 
@@ -44,8 +44,8 @@ html#main-window {
 #PlacesToolbar {
 	align-items: center !important;
 	display: flex !important;
-	font-family: "mononoki Nerd Font", sans-serif !important;
-	font-size: 12pt !important;
+	font-family: "Ubuntu", sans-serif !important;
+	font-size: 10pt !important;
 	font-weight: 700 !important;
 	justify-content: center !important;
 }
@@ -85,28 +85,29 @@ html#main-window {
 /* Url bar suggestions' selected row */
 .urlbarView:not(.megabar) .urlbarView-row:not([type="tip"])[selected],
 .urlbarView.megabar .urlbarView-row:not([type="tip"])[selected] > .urlbarView-row-inner {
-	background: #f9ff99 !important;
-	color: black !important;
+	background: #88c0d0 !important;
+	color: #bf616a !important;
 	fill-opacity: 1;
 }
 
 /* The text that says 'Search with ...' */
 .urlbarView-action {
-	color: black !important;
+	color: #eceff4 !important;
+	font-family: 'Ubuntu', sans-serif !important;
 }
 
 /* Url bar suggestions' row that is being hovered over */
 .urlbarView-row:hover {
 	background-color: none !important;
-	background-image: linear-gradient(77deg, #ffc386, #ff8989) !important;
-	color: black !important;
+	background-image: linear-gradient(77deg, #88c0d0, #88c0d0) !important;
+	color: #bf616a !important;
 }
 
 /* Text that says: This time, search with: */
 #urlbar-one-offs-header-label {
-	font-family: "Cantarell", sans-serif !important;
+	font-family: "Ubuntu", sans-serif !important;
 	font-size: 14pt !important;
-	font-weight: 700 !important;
+	font-weight: 500 !important;
 }
 
 #urlbar-background,
@@ -162,7 +163,7 @@ input#urlbar-input {
 
 /* Regular browser tabs */
 .tabbrowser-tab {
-	background-color: #1e1f29 !important;
+	background-color: #2e3440 !important;
 	background-image: linear-gradient(to left, var(--color-tab-normal-start), var(--color-tab-normal-end)) !important;
 	border-radius: var(--tab-height) !important;
 	margin-inline-end: var(--gap-between-tabs) !important;
@@ -172,14 +173,14 @@ input#urlbar-input {
 
 .tabbrowser-tab:hover {
 	background-color: none !important;
-	background-image: linear-gradient(to left, #c97dff, #ff8989) !important;
-	color: black !important;
+	background-image: linear-gradient(to left, #88c0d0, #88c0d0) !important;
+	color: #eceff4 !important;
 }
 
 .tabbrowser-tab[selected="true"] {
 	background-color: none !important;
-	background-image: linear-gradient(to left, #a1ffb6, #f9ff99) !important;
-	color: black !important;
+	background-image: linear-gradient(to left, #5e81ac, #5e81ac) !important;
+	color: #eceff4 !important;
 	font-weight: var(--tab-font-weight) !important;
 }
 
@@ -192,15 +193,15 @@ input#urlbar-input {
 /* pinned browser tabs */
 /* TODO: Find a way to add spacing between the pinned tabs when tab list scrolling is triggered. Adding a margin just screws everything up */
 .tabbrowser-tab:hover[pinned="true"] {
-	background-image: linear-gradient(to left, #ff8989, #ff8989) !important;
+	background-image: linear-gradient(to left, #88c0d0, #88c0d0) !important;
 }
 
 .tabbrowser-tab[pinned="true"][selected="true"] {
-	background-image: linear-gradient(to left, #a1ffb6, #a1ffb6) !important;
+	background-image: linear-gradient(to left, #88c0d0, #88c0d0) !important;
 }
 
 .tabbrowser-tab[pinned="true"] {
-	background-image: linear-gradient(to left, #ffc386, #ffc386) !important;
+	background-image: linear-gradient(to left, #d8dee9, #eceff4) !important;
 	color: #1d1d1d !important;
 	max-width: var(--tab-height) !important;
 	min-width: var(--tab-height) !important;
@@ -240,4 +241,21 @@ input#urlbar-input {
 	opacity: 1 !important;
 	margin: 0 !important;
 }
+
+
+toolbarbutton#tabs-newtab-button {
+
+	background-image: none !important;
+	
+	padding-left: 10px !important;
+	
+	margin: -10px !important;
+	
+}
+
+/* remove space before the first tab */
+.titlebar-spacer[type="pre-tabs"] {
+	display: none;
+}
+
 
