@@ -244,13 +244,9 @@ input#urlbar-input {
 
 
 toolbarbutton#tabs-newtab-button {
-
 	background-image: none !important;
-	
 	padding-left: 10px !important;
-	
-	margin: -10px !important;
-	
+	margin-left: -10px !important;
 }
 
 /* remove space before the first tab */
